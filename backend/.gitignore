@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+messages.json
+.env
