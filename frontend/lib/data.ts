@@ -43,7 +43,6 @@ export const FALLBACK_PROFILE: Profile = {
     "AI Chatbot & Automation Development",
     "Data Analysis & Visualization",
     "Curriculum Design & Lecturing",
-    "Client Prospecting & Outreach",
     "Mentoring & Communication",
   ],
   experience: [
@@ -78,6 +77,8 @@ export const FALLBACK_PROFILE: Profile = {
         "Built and deployed a plagiarism detection tool using Python and Gradio, hosted live on Hugging Face Spaces.",
       link: "https://github.com/MarriamFatima-alt/plagiarism-checker",
       link_label: "GitHub",
+      demo_link: "https://huggingface.co/spaces/Marriam-Fatima/plagiarism-checker",
+      demo_label: "Live Demo",
     },
     {
       title: "NLP Text Classification System",
