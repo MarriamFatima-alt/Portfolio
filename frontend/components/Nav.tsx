@@ -1,4 +1,8 @@
-const LINKS = [
+"use client";
+
+import { useState } from "react";
+
+const navLinks = [
   { href: "#about", label: "about" },
   { href: "#skills", label: "skills" },
   { href: "#experience", label: "experience" },
@@ -7,28 +11,47 @@ const LINKS = [
   { href: "#contact", label: "contact" },
 ];
 
-export default function Nav({ name }: { name: string }) {
+export default function Nav() {
+  const [open, setOpen] = useState(false);
+
   return (
-    <header className="sticky top-0 z-50 border-b border-line bg-ink/85 backdrop-blur">
-      <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-        <a href="#top" className="font-display text-sm font-semibold tracking-wide text-fg focus-ring">
-          {name}
-        </a>
-        <nav className="hidden gap-6 font-mono text-xs uppercase tracking-wider text-muted sm:flex">
-          {LINKS.map((l) => (
-            <a key={l.href} href={l.href} className="transition-colors hover:text-amber focus-ring">
-              {l.label}
+    <header className="sticky top-0 z-50 bg-[#0a0e14] border-b border-white/10">
+      <div className="flex items-center justify-between px-6 py-4">
+        <a href="#top" className="font-bold">Marriam Fatima</a>
+
+        {/* desktop links - hidden on mobile */}
+        <nav className="hidden md:flex gap-6">
+          {navLinks.map((link) => (
+            <a key={link.href} href={link.href}>{link.label}</a>
+          ))}
+        </nav>
+
+        {/* hamburger button - only shows on mobile */}
+        <button
+          className="md:hidden p-2"
+          aria-label="Toggle menu"
+          aria-expanded={open}
+          onClick={() => setOpen(!open)}
+        >
+          {open ? "✕" : "☰"}
+        </button>
+      </div>
+
+      {/* mobile dropdown menu */}
+      {open && (
+        <nav className="md:hidden flex flex-col gap-4 px-6 pb-6">
+          {navLinks.map((link) => (
+            
+              key={link.href}
+              href={link.href}
+              onClick={() => setOpen(false)}
+              className="py-2 text-lg"
+            >
+              {link.label}
             </a>
           ))}
         </nav>
-        <div className="flex items-center gap-2 font-mono text-[11px] text-teal-soft">
-          <span className="relative flex h-2 w-2">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-teal opacity-60" />
-            <span className="relative inline-flex h-2 w-2 rounded-full bg-teal" />
-          </span>
-          open-to-work
-        </div>
-      </div>
+      )}
     </header>
   );
 }
