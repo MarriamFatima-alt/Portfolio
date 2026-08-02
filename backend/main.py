@@ -14,10 +14,11 @@ app = FastAPI(title="Maryam Fatima Portfolio API", version="1.0.0")
 # For production, replace "*" with your actual frontend domain.
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["https://portfolio-s85c.vercel.app"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
+)
 )
 
 MESSAGES_FILE = Path(__file__).parent / "messages.json"
