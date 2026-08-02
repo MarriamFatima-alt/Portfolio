@@ -118,6 +118,11 @@ export const FALLBACK_PROFILE: Profile = {
     "Anthropic Academy — Multiple AI/ML Certification Courses, 2026",
     "Credit Corps Certificate — Professional Development, 2023",
   ],
+  links: {
+    linkedin: "https://www.linkedin.com/in/marriam-fatima-47687b409/",
+    github: "https://github.com/MarriamFatima-alt",
+    booking: "https://calendly.com/maryamqurban329/30min",
+  },
 };
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
