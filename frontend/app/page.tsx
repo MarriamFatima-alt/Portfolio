@@ -18,7 +18,7 @@ export default async function Home() {
 
   return (
     <main className="min-h-screen">
-      <Nav name={profile.name} />
+      <Nav />
       <Hero profile={profile} />
       <About profile={profile} />
       <Skills profile={profile} />
