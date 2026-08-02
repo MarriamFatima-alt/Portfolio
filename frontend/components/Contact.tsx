@@ -67,7 +67,17 @@ export default function Contact({ profile }: { profile: Profile }) {
               <dt className="text-teal-soft">location:</dt>
               <dd>{profile.location}</dd>
             </div>
-          </dl>
+          </dl><div className="mt-6 flex flex-wrap gap-4 font-mono text-xs">
+              <a href={profile.links.linkedin} target="_blank" rel="noopener noreferrer" className="text-teal-soft underline">
+                linkedin →
+              </a>
+              <a href={profile.links.github} target="_blank" rel="noopener noreferrer" className="text-teal-soft underline">
+                github →
+              </a>
+              <a href={profile.links.booking} target="_blank" rel="noopener noreferrer" className="text-teal-soft underline">
+                book a call →
+              </a>
+            </div>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">
