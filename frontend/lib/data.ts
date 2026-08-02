@@ -10,15 +10,13 @@ export const FALLBACK_PROFILE: Profile = {
   location: "Faisalabad, Punjab, Pakistan",
   email: "maryamqurban329@gmail.com",
   phone: "+92-307-9667743",
-  summary:
-    "summary": (
-        "Motivated AI/ML Engineer and BSCS graduate (Gomal University) with hands-on experience "
-        "building and deploying machine learning applications, including NLP classifiers, "
-        "plagiarism-detection tools, and LLM-based chatbots. Currently advancing applied AI/ML "
-        "skills through the FlyRank AI ML Engineering Internship. Combines strong programming "
-        "fundamentals with collegiate-level teaching experience, enabling clear communication "
-        "of complex technical concepts."
-    ),
+ summary:
+    "Motivated AI/ML Engineer and BSCS graduate (Gomal University) with hands-on experience " +
+    "building and deploying machine learning applications, including NLP classifiers, " +
+    "plagiarism-detection tools, and LLM-based chatbots. Currently advancing applied AI/ML " +
+    "skills through the FlyRank AI ML Engineering Internship. Combines strong programming " +
+    "fundamentals with collegiate-level teaching experience, enabling clear communication " +
+    "of complex technical concepts.",
   skills: [
     {
       group: "AI & ML",
