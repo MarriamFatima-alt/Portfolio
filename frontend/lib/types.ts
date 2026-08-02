@@ -15,6 +15,8 @@ export interface ProjectItem {
   description: string;
   link: string | null;
   link_label: string | null;
+  demo_link?: string | null;
+  demo_label?: string | null;
 }
 export interface EducationItem {
   degree: string;
