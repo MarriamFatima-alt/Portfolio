@@ -2,7 +2,6 @@ export interface SkillGroup {
   group: string;
   tags: string[];
 }
-
 export interface ExperienceItem {
   title: string;
   org: string;
@@ -10,7 +9,6 @@ export interface ExperienceItem {
   dates: string;
   points: string[];
 }
-
 export interface ProjectItem {
   title: string;
   stack: string[];
@@ -18,12 +16,15 @@ export interface ProjectItem {
   link: string | null;
   link_label: string | null;
 }
-
 export interface EducationItem {
   degree: string;
   school: string;
 }
-
+export interface Links {
+  linkedin: string;
+  github: string;
+  booking: string;
+}
 export interface Profile {
   name: string;
   role: string;
@@ -38,4 +39,5 @@ export interface Profile {
   projects: ProjectItem[];
   education: EducationItem[];
   certifications: string[];
+  links: Links;
 }
