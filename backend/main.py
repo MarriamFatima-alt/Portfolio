@@ -19,7 +19,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-)
 
 MESSAGES_FILE = Path(__file__).parent / "messages.json"
 
