@@ -27,13 +27,24 @@ export default function Projects({ profile }: { profile: Profile }) {
               ))}
             </div>
             {project.link && (
-              <a
+              
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="focus-ring mt-4 inline-flex w-fit items-center gap-1 font-mono text-xs text-amber-soft transition-colors hover:text-amber"
               >
                 {project.link_label ?? "View"}
+                <span aria-hidden="true">→</span>
+              </a>
+            )}
+            {project.demo_link && (
+              <a
+                href={project.demo_link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="focus-ring mt-2 inline-flex w-fit items-center gap-1 font-mono text-xs text-teal-soft transition-colors hover:text-teal"
+              >
+                {project.demo_label ?? "Live Demo"}
                 <span aria-hidden="true">→</span>
               </a>
             )}
