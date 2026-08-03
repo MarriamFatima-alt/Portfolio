@@ -27,7 +27,7 @@ export default function Projects({ profile }: { profile: Profile }) {
               ))}
             </div>
             {project.link && (
-              
+              <a
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
