@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Inter, JetBrains_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
+
+// TODO: once your custom domain (or confirmed vercel.app URL) is final,
+// set this to the exact live URL — it's used to build absolute URLs for
+// the social-share preview image below.
+const siteUrl = "https://marriamfatima.vercel.app";
 
 const display = Space_Grotesk({
   subsets: ["latin"],
@@ -21,9 +27,24 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Maryam Fatima — AI/ML Engineer",
+  metadataBase: new URL(siteUrl),
+  title: "Marriam Fatima — AI/ML Engineer",
   description:
-    "Portfolio of Maryam Fatima: AI/ML Engineer, educator, and founder of MK AI HUB, building NLP, chatbot, and automation projects.",
+    "Portfolio of Marriam Fatima: AI/ML Engineer, educator, and founder of MK AI HUB, building NLP, chatbot, and automation projects.",
+  openGraph: {
+    title: "Marriam Fatima — AI/ML Engineer",
+    description:
+      "Portfolio of Marriam Fatima: AI/ML Engineer, educator, and founder of MK AI HUB, building NLP, chatbot, and automation projects.",
+    url: siteUrl,
+    siteName: "Marriam Fatima",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Marriam Fatima — AI/ML Engineer",
+    description:
+      "Portfolio of Marriam Fatima: AI/ML Engineer, educator, and founder of MK AI HUB.",
+  },
 };
 
 export default function RootLayout({
@@ -33,7 +54,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${display.variable} ${body.variable} ${mono.variable}`}>
-      <body className="font-body antialiased">{children}</body>
+      <body className="font-body antialiased">
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
